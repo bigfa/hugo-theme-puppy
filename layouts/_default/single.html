@@ -66,8 +66,8 @@
     </div>
     {{ end }}
     <div class="post-nav">
+        {{ if .NextPage }}
         <div class="next-post post-navItem">
-            {{ if .NextPage }}
             <a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">
                 {{ if .NextPage.Content }}
                 {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .NextPage.Content }} {{ if $urls }} {{ $url :=index
@@ -75,11 +75,10 @@
         {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}
                 {{ .NextPage.Title | truncate 50 "..."
                 }}</a>
-            {{ end }}
         </div>
-
+        {{ end }}
+        {{ if .PrevPage }}
         <div class="previous-post post-navItem">
-            {{ if .PrevPage }}
             <a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">
                 {{ if .PrevPage.Content }}
                 {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .PrevPage.Content }} {{ if $urls }} {{ $url :=index
@@ -87,8 +86,8 @@
         {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}
                 {{ .PrevPage.Title | truncate 50 "..."}}
             </a>
-            {{ end }}
         </div>
+        {{ end }}
     </div>
     {{ if .Params.story_id }}
     {{ partial "commentlist.html" . }}
