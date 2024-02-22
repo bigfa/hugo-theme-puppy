@@ -43,7 +43,7 @@
     </div>
     <div class="article--tags u-paddingTop20">
         {{ range (.GetTerms "tags") }}
-        <a href="{{ .RelPermalink }}" class="artile--tag"><span>#</span>{{ .LinkTitle }}</a>
+        <a href="{{ .RelPermalink }}" class="artile--tag">{{ .LinkTitle }}</a>
         {{ end }}
     </div>
     {{ if .Params.cc }}

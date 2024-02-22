@@ -1,8 +1,8 @@
 :root {
     --x-height-multiplier: 0;
     --baseline-multiplier: 0;
-    --main-bg-color: rgba(0, 87, 217);
-    --main-hover-color: rgba(104, 156, 233, 1);
+    --main-bg-color: #2d7172;
+    --main-hover-color: #2d7172;
     --text-main-color: rgba(0, 0, 0, 0.86);
     --text-gray-medium: rgba(0, 0, 0, 0.7);
     --text-gray-lightest: rgba(0, 0, 0, 0.55);
@@ -640,10 +640,13 @@ a {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     a {
         color: var(--main-bg-color);
         margin-right: 10px;
+        background-color: #f2f2f2;
+        border-radius: 999rem;
+        padding: 3px 20px;
         span {
             margin-right: 3px;
         }
@@ -661,11 +664,11 @@ a {
 }
 
 .postCat--item {
-    padding: 20px 0;
-    border-top: 1px solid var(--main-border-color);
-    border-bottom: 1px solid var(--main-border-color);
+    padding: 12px;
+    border: 1px solid var(--main-border-color);
     display: flex;
     align-items: center;
+    border-radius: 10px;
     .artile--category {
         font-size: 18px;
         font-weight: bold;
@@ -780,7 +783,7 @@ a {
 
 .toc {
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 15px 20px;
     background-color: var(--background-gray-lightest);
     border-radius: 10px;
     margin-bottom: 20px;
