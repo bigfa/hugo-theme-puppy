@@ -65,19 +65,31 @@
         </svg>
     </div>
     {{ end }}
-    {{ range (.GetTerms "categories") }}
-    <div class="postCat--item">
-        {{ if .Params.cover }}
-        <img src="{{ .Params.cover}}" class="cover" />
-        {{ end }}
-        <div class="postCat--content">
-            <a href="{{ .RelPermalink }}" class="artile--category">
-                {{ .LinkTitle }}
+    <div class="post-nav">
+        <div class="next-post post-navItem">
+            {{ if .NextPage }}
+            <a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">
+                {{ if .NextPage.Content }}
+                {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .NextPage.Content }} {{ if $urls }} {{ $url :=index
+                    ($urls) 0 }} {{ $url :=(strings.TrimPrefix "<img src=\"" $url) }}
+        {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}
+                {{ .NextPage.Title | truncate 50 "..."
+                }}</a>
+            {{ end }}
+        </div>
+
+        <div class="previous-post post-navItem">
+            {{ if .PrevPage }}
+            <a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">
+                {{ if .PrevPage.Content }}
+                {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .PrevPage.Content }} {{ if $urls }} {{ $url :=index
+                    ($urls) 0 }} {{ $url :=(strings.TrimPrefix "<img src=\"" $url) }}
+        {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}
+                {{ .PrevPage.Title | truncate 50 "..."}}
             </a>
-            <p>{{ .Params.description }}</p>
+            {{ end }}
         </div>
     </div>
-    {{ end }}
     {{ if .Params.story_id }}
     {{ partial "commentlist.html" . }}
     {{ end }}

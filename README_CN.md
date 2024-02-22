@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
+### 0.0.2
+
+-   增加文章上下文链接
+
 ### 0.0.1
 
 -   初始化
