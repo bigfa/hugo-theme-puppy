@@ -7,10 +7,14 @@ hugo theme
 ```
 git submodule add https://github.com/bigfa/hugo-theme-puppy.git themes/puppy
 
-echo "theme = 'notability'" >> hugo.toml
+echo "theme = 'puppy'" >> hugo.toml
 ```
 
 ## Release Note
+
+### 0.0.3
+
+-   修改友情链接样式
 
 ### 0.0.2
 

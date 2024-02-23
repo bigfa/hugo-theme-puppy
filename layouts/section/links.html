@@ -7,6 +7,7 @@
             {{ range .Params.links }}
             <li class="link-item">
                 <a class="link-item-inner effect-apollo" href="{{ .link }}" title="Just a blog" target="_blank">
+                    <img src="{{ .cover }}" alt="{{ .title }}" class="link-item-icon" />
                     <span class="sitename"><strong>{{ .title }}</strong>{{ .description }}</span>
                 </a>
             </li>
