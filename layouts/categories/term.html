@@ -6,8 +6,14 @@
     {{ end }}
 </header>
 <div class="layoutSingleColumn">
-    {{ range .Data.Pages }}
-    {{ partial "post.html" . }}
-    {{ end }}
+    <div class="articleList u-xs-paddingTop15">
+        {{ range .Data.Pages }}
+        {{ if eq .Type "memo" }}
+        {{ partial "memo.html" . }}
+        {{ else }}
+        {{ partial "post.html" . }}
+        {{ end }}
+        {{ end }}
+    </div>
 </div>
 {{ end }}

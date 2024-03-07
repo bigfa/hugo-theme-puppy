@@ -9,7 +9,8 @@
         {{ partial "memo.html" . }}
         {{ else }}
         {{ partial "post.html" . }}
-        {{ end }} {{ end }}
+        {{ end }}
+        {{ end }}
     </div>
     {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
     <div class="pagination">

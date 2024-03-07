@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> hugo.toml
 
 ## Release Note
 
+### 0.0.4
+
+-   文章列表样式修改
+
 ### 0.0.3
 
 -   修改友情链接样式

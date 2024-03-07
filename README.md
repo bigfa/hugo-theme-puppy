@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> config.toml
 
 ## Release Note
 
+### 0.0.4
+
+-   post list style change
+
 ### 0.0.3
 
 -   update friend link style
