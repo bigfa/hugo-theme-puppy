@@ -390,23 +390,6 @@ a {
     padding: 15px;
     border: 1px solid #eee;
     border-radius: 8px;
-    &__withImage {
-        display: flex;
-        //padding: 20px;
-        align-items: center;
-        .cover {
-            margin-right: 15px;
-            width: 105px;
-            height: 105px;
-            object-fit: cover;
-            border-radius: 4px;
-            flex: 0 0 auto;
-        }
-
-        .title {
-            font-size: 20px !important;
-        }
-    }
     .summary {
         font-size: 14px;
         line-height: 1.6;
@@ -423,6 +406,12 @@ a {
     .time {
         font-size: 12px;
         color: var(--text-gray-light);
+        a {
+            // color: var(--main-bg-color);
+            &:hover {
+                color: var(--main-hover-color);
+            }
+        }
     }
     .title {
         margin-top: 0;
@@ -433,6 +422,7 @@ a {
         a {
             &:hover {
                 text-decoration: underline;
+                color: var(--main-bg-color);
             }
         }
     }
@@ -445,17 +435,11 @@ a {
         object-fit: cover;
         aspect-ratio: 16 / 9;
         border-radius: 5px;
+        margin-bottom: 5px;
     }
 
     .categories {
         font-size: 14px;
-        a {
-            color: var(--main-bg-color);
-            font-weight: 500;
-            &:hover {
-                color: var(--main-hover-color);
-            }
-        }
     }
 }
 
