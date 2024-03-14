@@ -89,6 +89,7 @@
         </div>
         {{ end }}
     </div>
+    {{ partial "related.html" . }}
     {{ if .Params.story_id }}
     {{ partial "commentlist.html" . }}
     {{ end }}

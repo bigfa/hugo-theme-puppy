@@ -10,6 +10,7 @@
     --background-gray-light: #f2f4f6;
     --background-gray-lightest: #fafafa;
     --background-white: #fff;
+    --background-cream: #f6f5f1;
     --main-border-color: rgba(0, 0, 0, 0.1);
     --main-border-color-light: rgba(0, 0, 0, 0.05);
 }
@@ -24,6 +25,7 @@
         --text-gray-lightest: rgba(113, 113, 122, 0.95);
 
         --background-white: #1e1e1e;
+        --background-cream: #161511;
         --background-gray-light: #333;
         --background-gray-lightest: #000;
 
@@ -44,6 +46,7 @@
     --text-gray-lightest: rgba(113, 113, 122, 0.95);
 
     --background-white: #1e1e1e;
+    --background-cream: #161511;
     --background-gray-light: #333;
     --background-gray-lightest: #000;
 
@@ -171,6 +174,10 @@ body {
     color: var(--text-main-color);
     line-height: 1.8;
     background-color: var(--background-white);
+    background: linear-gradient(
+        var(--background-cream) 0,
+        var(--background-white) 210px
+    );
 }
 
 .metabar {
@@ -604,18 +611,37 @@ a {
 }
 
 .related--content {
-    padding: 25px 0 0;
+    padding: 25px 0;
     h3 {
         font-weight: bold;
         margin-bottom: 5px;
     }
     ul {
         li {
+            padding: 10px 0;
             a {
-                color: var(--main-bg-color);
+                display: flex;
+                flex-direction: column;
+                line-height: 1.3;
                 &:hover {
-                    text-decoration: underline;
-                    color: var(--main-hover-color);
+                    .related--title {
+                        text-decoration: underline;
+                        color: var(--main-hover-color);
+                    }
+                }
+                .related--title {
+                    color: var(--main-bg-color);
+                    font-weight: bold;
+                    svg {
+                        display: inline-block;
+                        vertical-align: -1px;
+                        margin-left: 3px;
+                    }
+                    margin-bottom: 4px;
+                }
+                .related--meta {
+                    font-size: 14px;
+                    color: var(--text-gray-light);
                 }
             }
         }
@@ -675,7 +701,7 @@ a {
     a {
         color: var(--main-bg-color);
         margin-right: 10px;
-        background-color: #f2f2f2;
+        background-color: var(--background-gray-light);
         border-radius: 999rem;
         padding: 3px 20px;
         span {

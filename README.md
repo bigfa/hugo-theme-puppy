@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> config.toml
 
 ## Release Note
 
+### 0.0.5
+
+-   add related posts
+
 ### 0.0.4
 
 -   post list style change
