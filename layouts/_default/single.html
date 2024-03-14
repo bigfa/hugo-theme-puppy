@@ -73,8 +73,11 @@
                 {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .NextPage.Content }} {{ if $urls }} {{ $url :=index
                     ($urls) 0 }} {{ $url :=(strings.TrimPrefix "<img src=\"" $url) }}
         {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}
-                {{ .NextPage.Title | truncate 50 "..."
-                }}</a>
+                <div>
+                    <div class="title">{{ .NextPage.Title | truncate 50 "..." }}</div>
+                    <div class="meta">{{ .NextPage.Date.Format "2006-01-02" }}</div>
+                </div>
+            </a>
         </div>
         {{ end }}
         {{ if .PrevPage }}
@@ -84,7 +87,10 @@
                 {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .PrevPage.Content }} {{ if $urls }} {{ $url :=index
                     ($urls) 0 }} {{ $url :=(strings.TrimPrefix "<img src=\"" $url) }}
         {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}
-                {{ .PrevPage.Title | truncate 50 "..."}}
+                <div>
+                    <div class="title">{{ .PrevPage.Title | truncate 50 "..."}}</div>
+                    <div class="meta">{{ .PrevPage.Date.Format "2006-01-02" }}</div>
+                </div>
             </a>
         </div>
         {{ end }}
@@ -94,5 +100,4 @@
     {{ partial "commentlist.html" . }}
     {{ end }}
 </div>
-
 {{ end }}

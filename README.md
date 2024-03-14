@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> config.toml
 
 ## Release Note
 
+### 0.0.6
+
+-   add adjacent post meta
+
 ### 0.0.5
 
 -   add related posts

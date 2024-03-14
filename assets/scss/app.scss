@@ -513,7 +513,7 @@ a {
 }
 
 .article--headline {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 0px;
@@ -1097,7 +1097,7 @@ a {
     width: 60px;
     height: 60px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .post-nav {
@@ -1106,16 +1106,24 @@ a {
     grid-gap: 15px;
     padding: 20px 0;
     &Item {
-        padding: 10px;
+        padding: 8px;
         border: 1px solid var(--main-border-color);
-        border-radius: 10px;
+        border-radius: 8px;
         a {
             display: flex;
+            color: var(--text-gray-medium);
             .post--navCover {
                 margin-right: 10px;
             }
             &:hover {
                 color: var(--main-bg-color);
+            }
+            .title {
+                font-weight: normal;
+            }
+            .meta {
+                font-size: 14px;
+                color: var(--text-gray-light);
             }
         }
         &:nth-child(2) {
@@ -1125,6 +1133,7 @@ a {
                     margin-left: 10px;
                     margin-right: 0;
                 }
+                text-align: right;
             }
         }
     }
