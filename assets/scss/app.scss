@@ -397,6 +397,7 @@ a {
     padding: 15px;
     border: 1px solid #eee;
     border-radius: 8px;
+    margin-bottom: 15px;
     .summary {
         font-size: 14px;
         line-height: 1.6;
@@ -486,9 +487,6 @@ a {
 
 .articleList {
     padding: 50px 0 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
 }
 
 .u-paddingTop50 {
@@ -981,6 +979,7 @@ a {
     border: 1px solid #eee;
     border-radius: 8px;
     &__status {
+        margin-bottom: 15px;
         .avatar {
             border-radius: 100%;
             margin-right: 10px;
