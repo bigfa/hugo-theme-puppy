@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> config.toml
 
 ## Release Note
 
+### 0.0.7
+
+-   add article header
+
 ### 0.0.6
 
 -   add adjacent post meta

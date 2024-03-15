@@ -1,10 +1,6 @@
-<header class="metabar metabar--article">
-	<div class="metabar--block" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-		<a href='{{ site.Home.Permalink }}' class="metabar--logo">
-			Fatesinger
-		</a>
-		<span class="by">by</span>
-		<img src="https://static.fatesinger.com/2021/03/npbmdu72xozbul3w.jpg!/both/200x200" class="metabar--avatar" />
+<header class="metabar metabar--bordered">
+	<div class="metabar--block layoutSingleColumn" itemprop="publisher" itemscope
+		itemtype="https://schema.org/Organization">
 		{{ if len $.Site.Menus }}
 		<nav class="site--nav">
 			{{ range $.Site.Menus.main }}
@@ -20,5 +16,12 @@
 			<line x1="24" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2"></line>
 		</svg>
 	</div>
+	<h1 class="metabar--headline" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+		<img src="https://static.fatesinger.com/2021/03/npbmdu72xozbul3w.jpg!/both/200x200" class="metabar--avatar" />
+		<a href='{{ site.Home.Permalink }}' class="metabar--logo">
+			Fatesinger
+		</a>
+		<span class="metabar--description">野生设计师</span>
+	</h1>
 </header>
 <div class="mask"></div>

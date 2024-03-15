@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> hugo.toml
 
 ## Release Note
 
+### 0.0.7
+
+-   文章导航
+
 ### 0.0.6
 
 -   增加上下文元信息

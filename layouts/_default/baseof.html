@@ -7,7 +7,11 @@
 </head>
 
 <body>
+    {{ if .IsHome }}
+    {{ partial "home.html" . }}
+    {{ else }}
     {{ partial "navigation.html" . }}
+    {{ end }}
     <main class="main">
         {{ block "main" . }}{{ end }}
     </main>
