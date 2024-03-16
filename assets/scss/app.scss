@@ -396,7 +396,7 @@ a {
 
 .articleItem {
     padding: 15px;
-    border: 1px solid #eee;
+    border: 1px solid var(--main-border-color);
     border-radius: 8px;
     margin-bottom: 15px;
     .summary {
@@ -977,7 +977,7 @@ a {
 
 .post--item {
     padding: 15px;
-    border: 1px solid #eee;
+    border: 1px solid var(--main-border-color);
     border-radius: 8px;
     &__status {
         margin-bottom: 15px;
