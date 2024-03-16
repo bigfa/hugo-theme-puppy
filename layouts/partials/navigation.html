@@ -1,10 +1,10 @@
 <header class="metabar metabar--article">
 	<div class="metabar--block" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
 		<a href='{{ site.Home.Permalink }}' class="metabar--logo">
-			Fatesinger
+			{{ $.Site.Title }}
 		</a>
 		<span class="by">by</span>
-		<img src="https://static.fatesinger.com/2021/03/npbmdu72xozbul3w.jpg!/both/200x200" class="metabar--avatar" />
+		<img src="{{ $.Site.Params.authorAvatar }}" class="metabar--avatar" />
 		{{ if len $.Site.Menus }}
 		<nav class="site--nav">
 			{{ range $.Site.Menus.main }}

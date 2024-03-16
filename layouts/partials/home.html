@@ -17,11 +17,11 @@
 		</svg>
 	</div>
 	<h1 class="metabar--headline" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-		<img src="https://static.fatesinger.com/2021/03/npbmdu72xozbul3w.jpg!/both/200x200" class="metabar--avatar" />
+		<img src="{{ $.Site.Params.authorAvatar }}" class="metabar--avatar" />
 		<a href='{{ site.Home.Permalink }}' class="metabar--logo">
-			Fatesinger
+			{{ $.Site.Title }}
 		</a>
-		<span class="metabar--description">野生设计师</span>
+		<span class="metabar--description">{{ $.Site.Params.authorDescription }}</span>
 	</h1>
 </header>
 <div class="mask"></div>
