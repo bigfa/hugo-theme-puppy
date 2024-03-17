@@ -186,6 +186,7 @@ body {
         var(--background-cream) 0,
         var(--background-white) 210px
     );
+    min-height: 100vh;
 }
 
 .metabar {
@@ -395,7 +396,20 @@ a {
 }
 
 .articleItem {
-    padding: 15px;
+    .cover {
+        width: 150px;
+        height: 120px;
+        object-fit: cover;
+        flex: 0 0 auto;
+        margin-right: 15px;
+        border-radius: 5px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    display: flex;
+    padding: 12px;
     border: 1px solid var(--main-border-color);
     border-radius: 8px;
     margin-bottom: 15px;
@@ -421,6 +435,7 @@ a {
                 color: var(--main-hover-color);
             }
         }
+        margin-top: auto;
     }
     .title {
         margin-top: 0;
@@ -437,14 +452,6 @@ a {
     }
     &:last-child {
         margin-bottom: 0;
-    }
-
-    .cover {
-        width: 100%;
-        object-fit: cover;
-        aspect-ratio: 16 / 9;
-        border-radius: 5px;
-        margin-bottom: 5px;
     }
 
     .categories {
@@ -1165,5 +1172,32 @@ a {
     .by,
     .metabar--logo {
         font-family: mrs_saint_delafieldregular;
+    }
+}
+
+.last--title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.topCard {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    &--item {
+        border-radius: 5px;
+        padding: 12px;
+        border: 1px solid var(--main-border-color);
+        display: flex;
+    }
+
+    &--cover {
+        border-radius: 5px;
+    }
+
+    & + .articleList {
+        padding-top: 20px;
     }
 }

@@ -1,7 +1,19 @@
 {{ define "main" }}
 
 <div class="layoutSingleColumn">
+    <div class="topCard">
+        <div class="topCard--item">
+            <img src="https://static.fatesinger.com/2023/10/aeqd36ewmo15vnzj.jpg" class="topCard--cover" alt="avatar">
+        </div>
+        <div class="topCard--item">
+            <img src="https://static.fatesinger.com/2024/01/py6p1vbg0b34hr3x.jpeg" class="topCard--cover" alt="avatar">
+        </div>
+        <div class="topCard--item">
+            <img src="https://static.fatesinger.com/2023/10/ldlkc4cbro8n4dv1.jpg" class="topCard--cover" alt="avatar">
+        </div>
+    </div>
     <div class="articleList u-xs-paddingTop15">
+        <div class="last--title">最新文章</div>
         {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
         {{ $paginator := .Paginate ($pages) }}
         {{ range $paginator.Pages }}

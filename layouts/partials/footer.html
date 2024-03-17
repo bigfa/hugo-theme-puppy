@@ -1,14 +1,5 @@
 <footer class="site--footer">
     <div class="layoutSingleColumn">
-        {{ if len $.Site.Menus }}
-        <nav class="site--nav">
-            {{ range $.Site.Menus.main }}
-            {{ if not .HasChildren }}
-            <a href="{{ .URL }}">{{ .Name }}</a>
-            {{ end }}
-            {{ end }}
-        </nav>
-        {{ end }}
         <div class="copyright">
             Theme by <a href="https://fatesinger.com/74850 " target="_blank">bigfa</a>
             {{ with .Site.Params.copyright }}
