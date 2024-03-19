@@ -399,6 +399,9 @@ a {
     border: 1px solid var(--main-border-color);
     border-radius: 8px;
     margin-bottom: 15px;
+    &:last-child {
+        margin-bottom: 0;
+    }
     .summary {
         font-size: 14px;
         line-height: 1.6;
@@ -1166,4 +1169,12 @@ a {
     .metabar--logo {
         font-family: mrs_saint_delafieldregular;
     }
+}
+
+.u-paddingBottom30 {
+    padding-bottom: 30px;
+}
+
+.u-paddingBottom50 {
+    padding-bottom: 50px;
 }
