@@ -12,6 +12,11 @@ echo "theme = 'puppy'" >> config.toml
 
 ## Release Note
 
+### 0.0.8
+
+-   redesign metabar
+-   post cover param name change
+
 ### 0.0.7
 
 -   add article header

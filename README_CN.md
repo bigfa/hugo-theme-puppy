@@ -12,6 +12,11 @@ echo "theme = 'puppy'" >> hugo.toml
 
 ## Release Note
 
+### 0.0.8
+
+-   站点头部重新调整
+-   调整封面变量名
+
 ### 0.0.7
 
 -   文章导航

@@ -69,7 +69,10 @@
         {{ if .NextPage }}
         <div class="next-post post-navItem">
             <a class="link-reverse" href="{{ .NextPage.Permalink }}?ref=footer">
-                {{ if .NextPage.Content }}
+                {{ if .NextPage.Params.cover }}
+                {{ $url := .NextPage.Params.cover | absURL }}
+                <img src="{{ $url }}" class="post--navCover" itemprop="image" />
+                {{ else if .NextPage.Content }}
                 {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .NextPage.Content }} {{ if $urls }} {{ $url :=index
                     ($urls) 0 }} {{ $url :=(strings.TrimPrefix "<img src=\"" $url) }}
         {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}
@@ -83,7 +86,10 @@
         {{ if .PrevPage }}
         <div class="previous-post post-navItem">
             <a class="link-reverse" href="{{ .PrevPage.Permalink }}?ref=footer">
-                {{ if .PrevPage.Content }}
+                {{ if .PrevPage.Params.cover }}
+                {{ $url := .PrevPage.Params.cover | absURL }}
+                <img src="{{ $url }}" class="post--navCover" itemprop="image" />
+                {{ else if .PrevPage.Content }}
                 {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .PrevPage.Content }} {{ if $urls }} {{ $url :=index
                     ($urls) 0 }} {{ $url :=(strings.TrimPrefix "<img src=\"" $url) }}
         {{ $url := strings.TrimRight " \"" $url }} <img src="{{ $url }}" class="post--navCover" /> {{ end }} {{ end }}

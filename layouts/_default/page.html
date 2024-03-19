@@ -8,11 +8,6 @@
     <div class="content graph">
         {{ .Content }}
     </div>
-    <div class="tags u-paddingTop20">
-        {{ range (.GetTerms "tags") }}
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-        {{ end }}
-    </div>
 </div>
 
 {{ end }}

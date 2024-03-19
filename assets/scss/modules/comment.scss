@@ -15,21 +15,23 @@
         resize: none;
         border-radius: 5px;
         box-sizing: border-box;
-        border: 1px solid #999;
+        border: 1px solid var(--main-border-color);
         padding: 8px 15px;
         font-size: 14px;
+        background: var(--background-white);
     }
     .submit {
-        background-color: #000;
-        color: #fff;
+        background-color: var(--main-bg-color);
+        color: var(--background-white);
         border: 0;
         font-size: 14px;
         cursor: pointer;
         padding: 8px 30px;
         border-radius: 5px;
+        // font-weight: bold;
         width: auto;
         &:hover {
-            background-color: var(--text-gray-light);
+            background-color: var(--main-hover-color);
         }
     }
     p {
