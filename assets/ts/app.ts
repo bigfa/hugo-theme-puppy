@@ -586,3 +586,16 @@ if (document.querySelector(".backToTop")) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+if (document.querySelector(".post-nav")) {
+    const postNav = document.querySelector(".post-nav") as HTMLElement;
+    const postContent = document.querySelector(".content") as HTMLElement;
+    const postContentOffsetTop = postContent.offsetTop;
+    window.addEventListener("scroll", () => {
+        console.log(postContentOffsetTop);
+        const t = window.scrollY || window.pageYOffset;
+        t > postContentOffsetTop + postContent.clientHeight - window.innerHeight
+            ? postNav!.classList.add("is-active")
+            : postNav!.classList.remove("is-active");
+    });
+}

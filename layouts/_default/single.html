@@ -65,6 +65,13 @@
         </svg>
     </div>
     {{ end }}
+    <div class="author--infoCard">
+        <img src="{{ $.Site.Params.authorAvatar }}" class="avatar" />
+        <div class="info">
+            <div class="name">{{ $.Site.Params.authorName }}</div>
+            <div class="desc">{{ $.Site.Params.authorDescription }}</div>
+        </div>
+    </div>
     <div class="post-nav">
         {{ if .NextPage }}
         <div class="next-post post-navItem">

@@ -12,6 +12,11 @@ echo "theme = 'puppy'" >> config.toml
 
 ## Release Note
 
+### 0.0.9
+
+-   add author card
+-   make post nav scroll to show
+
 ### 0.0.8
 
 -   redesign metabar
