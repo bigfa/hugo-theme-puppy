@@ -397,16 +397,17 @@ a {
 
 .articleItem {
     .cover {
-        width: 100%;
-        height: 220px;
+        width: 220px;
+        height: 140px;
         object-fit: cover;
-        flex: 0 0 auto;
         // margin-bottom: 15px;
         border-radius: 5px;
         &--wrap {
             display: flex;
+            width: 220px;
+            flex: 0 0 auto;
             position: relative;
-            margin-bottom: 10px;
+            margin-left: 20px;
             .time {
                 position: absolute;
                 bottom: 10px;
@@ -422,10 +423,12 @@ a {
         display: flex;
         flex-direction: column;
         padding: 0 5px;
+        flex: 1 1 auto;
     }
     display: flex;
-    // padding: 12px;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    padding: 12px;
+    // flex-direction: column;
     // border: 1px solid var(--main-border-color);
     border-radius: 8px;
     // margin-bottom: 15px;
@@ -455,6 +458,15 @@ a {
             }
         }
         margin-top: auto;
+        display: flex;
+        align-items: center;
+        .avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            object-fit: cover;
+            margin-right: 8px;
+        }
     }
     .title {
         margin-top: 0;
@@ -515,7 +527,7 @@ a {
 .articleList {
     padding: 80px 0 30px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
 }
 
