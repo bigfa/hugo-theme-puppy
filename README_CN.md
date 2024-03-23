@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> hugo.toml
 
 ## Release Note
 
+### 0.0.10
+
+-   重新设计首页
+
 ### 0.0.9
 
 -   作者信息

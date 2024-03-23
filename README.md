@@ -12,6 +12,10 @@ echo "theme = 'puppy'" >> config.toml
 
 ## Release Note
 
+### 0.0.10
+
+-   redesign homepage
+
 ### 0.0.9
 
 -   add author card

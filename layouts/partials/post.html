@@ -1,14 +1,14 @@
 <article class="articleItem">
     {{ if .Params.cover }}
     {{ $url := .Params.cover | absURL }}
-    <div class="cover--wrap">
+    <a class="cover--wrap" href="{{ .Permalink }}">
         <img src="{{ $url }}" class="cover" itemprop="image" />
-    </div>
+    </a>
     {{ else if .Content }}
     {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .Content }} {{ if $urls }} {{ $url :=index ($urls) 0 }} {{ $url
         :=(strings.TrimPrefix "<img src=\"" $url) }}
-{{ $url := strings.TrimRight " \"" $url }} <div class="cover--wrap">
-    <img src="{{ $url }}" class="cover" itemprop="image" /> </div>{{ end }} {{
+{{ $url := strings.TrimRight " \"" $url }} <a class="cover--wrap" href="{{ .Permalink }}">
+    <img src="{{ $url }}" class="cover" itemprop="image" /> </a>{{ end }} {{
     end }}
     <div class="content">
         <h2 class="title">
@@ -16,10 +16,9 @@
                 {{ .Title }}
             </a>
         </h2>
-        <div class="summary">{{ .Summary | truncate 60 }}</div>
+        <div class="summary">{{ .Summary | truncate 100 }}</div>
         <div class="time">
-            <img src="https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&d=mm&r=g" class="avatar"
-                alt="avatar" />
+            <img src="{{ $.Site.Params.authorAvatar }}" class="avatar" alt="avatar" />
             <time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date
                 | time.Format
                 ":date_long"
